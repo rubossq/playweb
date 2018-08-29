@@ -4,7 +4,7 @@ Website for gamedev company.
 
 Used technologies:
 
-** Frontend **
+## Frontend
 
 - HTML5
 - Bootstrap
@@ -12,14 +12,14 @@ Used technologies:
 - AJAX
 - Animate css
 
-** Backend **
+## Backend
 - Nodejs ( without frameworks )
 - Mongodb
 - Mustache
 - Underscore
 - Validate JS
 
-**Additional**
+## Additional
 - Gulp
 - Mocha + Chai + Sinon
 - JSHint
