@@ -1,0 +1,250 @@
+{{> header}}
+<!-- Main start -->
+<main class="container my-5 pb-5">
+    <div class="row">
+        <section class="col-11 col-md-7 col-lg-5 mx-auto">
+            <form action="" method="POST">
+                {{#game.id}}
+                    <input type="hidden" name="id" value="{{game.id}}">
+                {{/game.id}}
+                <div class="form-group">
+                    <label for="alias">Alias</label>
+                    <input class="form-control" type="text" id="alias" value="{{game.alias}}" name="alias" minlength="2" maxlength="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" id="name" value="{{game.name}}"  name="name" minlength="2" maxlength="48" required>
+                </div>
+                <div class="form-group">
+                    <label for="google_play">Google Play</label>
+                    <input class="form-control" type="text" id="google_play" value="{{game.google_play}}" name="google_play" required>
+                </div>
+                <div class="form-group">
+                    <label for="app_store">App Store</label>
+                    <input class="form-control" type="text" value="{{game.app_store}}" id="app_store" name="app_store" required>
+                </div>
+                <div class="form-group">
+                    <label for="youtube">Youtube</label>
+                    <input class="form-control" type="text" value="{{game.youtube}}" id="youtube" name="youtube" required>
+                </div>
+                <div class="form-group">
+                    <label for="short_desc">Slider description</label>
+                    <textarea rows="3" class="form-control" type="text" id="slider_desc" name="slider_desc" required>{{game.slider_desc}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="short_desc">Slider comment</label>
+                    <textarea rows="3" class="form-control" type="text" id="slider_comment" name="slider_comment" required>{{game.slider_comment}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="short_desc">List description</label>
+                    <textarea rows="3" class="form-control" type="text" id="list_desc" name="list_desc" required>{{game.list_desc}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="short_desc">Publisher description</label>
+                    <textarea rows="3" class="form-control" type="text" id="publisher_desc" name="publisher_desc" >{{game.publisher_desc}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="short_desc">Short description</label>
+                    <textarea rows="3" class="form-control" type="text" id="short_desc" name="short_desc" required>{{game.short_desc}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="desc">Description</label>
+                    <textarea rows="5" class="form-control" type="text" id="desc" name="desc" required>{{game.desc}}</textarea>
+                </div>
+                <div class="form-group row no-gutters  d-flex align-items-center">
+                    <div class="col-8 py-2">
+                        <a onclick="file(this, 'logo')" href="javascript:void(0)" class="btn btn-secondary">Upload logo</a>
+                    </div>
+                    <div class="col-4">
+                        <img class="w-100" src="{{game.logo}}">
+                    </div>
+                </div>
+                <div class="form-group row no-gutters  d-flex align-items-center">
+                    <div class="col-8 py-2">
+                        <a onclick="file(this, 'preview')" href="javascript:void(0)" class="btn btn-secondary">Upload preview</a>
+                    </div>
+                    <div class="col-4">
+                        <img class="w-100" src="{{game.preview}}">
+                    </div>
+                </div>
+                <div class="form-group row no-gutters  d-flex align-items-center">
+                    <div class="col-8 py-2">
+                        <a onclick="file(this, 'icon')" href="javascript:void(0)" class="btn btn-secondary">Upload icon</a>
+                    </div>
+                    <div class="col-4">
+                        <img class="w-100" src="{{game.icon}}">
+                    </div>
+                </div>
+                <div  class="form-group d-flex justify-content-between">
+                    <a class="btn btn-primary" data-toggle="collapse" href="#desktop" role="button" aria-expanded="false" aria-controls="desktop">Desktop</a>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#mobile" role="button" aria-expanded="false" aria-controls="mobile">Mobile</a>
+                </div>
+                <div class="collapse multi-collapse" id="desktop">
+                    <div class="form-group row no-gutters  d-flex align-items-center">
+                        <div class="col-8 py-2">
+                            <a onclick="file(this, 'banner_desktop')" href="javascript:void(0)" class="btn btn-secondary">Banner Desktop</a>
+                        </div>
+                        <div class="col-4">
+                            <img class="w-100" src="{{game.banner.desktop}}">
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters  d-flex align-items-center">
+                        <div class="col-8 py-2">
+                            <a onclick="file(this, 'header_desktop')" href="javascript:void(0)" class="btn btn-secondary">Header Desktop</a>
+                        </div>
+                        <div class="col-4">
+                            <img class="w-100" src="{{game.header.desktop}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse multi-collapse" id="mobile">
+                    <div class="form-group row no-gutters  d-flex align-items-center">
+                        <div class="col-8 py-2">
+                            <a onclick="file(this, 'banner_mobile')" href="javascript:void(0)" class="btn btn-secondary">Banner Mobile</a>
+                        </div>
+                        <div class="col-4">
+                            <img class="w-100" src="{{game.banner.mobile}}">
+                        </div>
+                    </div>
+                    <div class="form-group row no-gutters  d-flex align-items-center">
+                        <div class="col-8 py-2">
+                            <a onclick="file(this, 'header_mobile')" href="javascript:void(0)" class="btn btn-secondary">Header Mobile</a>
+                        </div>
+                        <div class="col-4">
+                            <img class="w-100" src="{{game.header.mobile}}">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group py-2">
+                    <a onclick="file(this, 'screenshots')" href="javascript:void(0)" class="btn btn-secondary">Screenshots</a>
+                </div>
+                <div class="form-group">
+                    <div id="screenshots" style="height:130px;  white-space: nowrap; overflow-x:auto; overflow-y:hidden;">
+                        {{#game.screenshots}}
+                            <div class="h-100 position-relative d-inline-block mr-1">
+                                <div style="right:7px; top:5px;" class="position-absolute">
+                                    <a onclick = "removeScreen(this)" href="javascript:void(0)" class="bg-dark px-1 pt-1"><i style="font-size:1.2rem" class="fas fa-times text-white"></i></a>
+                                </div>
+                                <img class="h-100" src="{{.}}">
+                            </div>
+                        {{/game.screenshots}}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="active" name="active" {{#game.active}}checked{{/game.active}}>
+                        <label class="form-check-label" for="active">Is active</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox" id="publishing" name="publishing" {{#game.publishing}}checked{{/game.publishing}}>
+                        <label class="form-check-label" for="publishing">Is publishing</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg">Save</button>
+            </form>
+            <form id="uploadForm" style="display:none;" action="/ap/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" id="inputImage" name="" onchange="upload()">
+            </form>
+        </section>
+    </div>
+</main>
+<!-- Main end -->
+
+<div id = "successAlert" style="bottom: 5px; left: 0; right: 0; display: none;" class="mx-auto alert alert-info text-center w-50 position-fixed" role="alert">
+    Image uplodaed! Don't forget to save!
+</div>
+
+<div id = "errorAlert" style="bottom: 5px; left: 0; right: 0;  display: none;" class="mx-auto alert alert-danger text-center w-50 position-fixed" role="alert">
+    Uploading error!
+</div>
+
+<div style="display:none;">
+    <div class="h-100 position-relative d-inline-block template-scrn mr-1">
+        <div style="right:7px; top:5px;" class="position-absolute">
+            <a onclick = "removeScreen(this)" href="javascript:void(0)" class="bg-dark px-1 pt-1"><i style="font-size:1.2rem" class="fas fa-times text-white"></i></a>
+        </div>
+        <img class="h-100" src="">
+    </div>
+</div>
+
+<script>
+
+    var curImg = null;
+    var curKind = "";
+    function file(elem, kind){
+        $('#inputImage').attr('name', kind);
+        $('#inputImage').click();
+        curKind = kind;
+        if(kind !== 'screenshots'){
+            curImg = $(elem).parent().parent().find('img:first');
+        }else{
+            curImg = null;
+        }
+    }
+
+    function upload(){
+        var form = $('#uploadForm');
+        console.log(form[0]);
+        var formData = new FormData(form[0]);
+
+        console.log(formData);
+
+        $.ajax({
+            url: "/ap/upload",
+            type: 'POST',
+            data: formData,
+            success: function (data) {
+                if(data.ok === 'yes'){
+                    $("#successAlert").fadeIn('fast');
+                }else{
+                    $("#errorAlert").fadeIn('fast');
+                }
+
+                setTimeout(function(){
+                    $("#successAlert").fadeOut('fast');
+                    $("#errorAlert").fadeOut('fast');
+                }, 1500);
+
+                if(curKind !== 'screenshots'){
+                    $(curImg).attr('src', data.relativePath + "?" + new Date().getTime());
+                }else{
+                    var $elem = $(".template-scrn").first().clone();
+                    $elem.removeClass("template-scrn");
+
+                    $elem.find('img').first().attr('src', data.relativePath);
+
+                    $("#screenshots").append($elem);
+                }
+
+
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+    }
+
+    function removeScreen(elem){
+        var item = $(elem).parent().parent().find('img').first().attr('src');
+        $.ajax({
+            url: "/ap/destroy",
+            type: 'POST',
+            data: {item: item},
+            success: function (data) {
+                if(data.ok === 'yes'){
+                    $(elem).parent().parent().remove();
+                }else{
+                    alert("Unrecognized error while deleting");
+                }
+            }
+        });
+    }
+
+</script>

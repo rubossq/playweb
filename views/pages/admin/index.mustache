@@ -1,0 +1,85 @@
+{{> header}}
+<!-- Main start -->
+<main class="container my-5 pb-5">
+    <div class="row">
+        <section class="col-12">
+            <table class="table w-100 text-center align-middle">
+                <thead class="table-primary">
+                <tr>
+                    <th scope="col">Icon</th>
+                    <th colspan="3" scope="col">Name</th>
+                    <th scope="col">Controls</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#games}}
+                    <tr data-row-id="{{id}}">
+                        <td style="max-width:100px;" > <img style="max-height:40px;" src="{{logo}}"></td>
+                        <td colspan="3" class="align-middle">{{name}}</td>
+                        <td style="max-width:100px;" class="align-middle">
+                            <a class="text-danger" style="font-size:1.3rem" onclick="remove('{{id}}', '{{alias}}')" href="javascript:void(0)"><i class="fas fa-trash-alt"></i></a>
+                            &nbsp;   &nbsp;
+                            <a style="font-size:1.3rem" href="/ap/game_form/{{alias}}"><i class="fas fa-edit"></i></a>
+                        </td>
+                    </tr>
+                {{/games}}
+                </tbody>
+            </table>
+        </section>
+    </div>
+</main>
+<!-- Main end -->
+
+<!-- Modal start -->
+<div id="removeModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete <span class="game-name-modal"></span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p >Are you sure?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="deleteBtn" onclick="confirm()" type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal end -->
+
+<script>
+
+    var delId;
+
+    function remove(id, alias){
+        delId = id;
+        $('.game-name-modal:first').text(alias);
+        $('#removeModal').modal('show');
+    }
+
+    function confirm(){
+        console.log("you have deleted item " + delId);
+        $('#removeModal').modal('hide');
+
+        $.ajax({
+            method: "POST",
+            url: "/ap/remove",
+            data: { id: delId }
+        })
+        .always(function( res ) {
+            if(res.ok === 'yes'){
+                $('[data-row-id="'+delId+'"]').fadeOut('fast', function(){
+                    $('[data-row-id="'+delId+'"]').remove();
+                });
+            }else{
+                alert("Delete error");
+            }
+
+        });
+    }
+</script>

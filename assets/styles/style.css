@@ -1,0 +1,179 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.77);
+    width: 100%;
+    top: 0;
+    z-index: 1020;
+}
+
+.carousel-caption {
+    bottom: auto;
+    top: 7rem;
+    left: auto;
+    right: auto;
+    width: 100%;
+}
+
+.square-bg {
+    width: 100%;
+    padding-bottom: 90%;
+    background-size: cover;
+    background-position: center;
+}
+
+.technologies {
+    background-image: url('../images/technologies.jpg');
+}
+
+.contacts {
+    background-image: url('../images/contacts.jpg');
+}
+
+.blockchain{
+    background-image: url('../images/tech/blockchain.jpg');
+}
+
+.ar{
+    background-image: url('../images/tech/ar.jpg');
+}
+
+.ml{
+    background-image: url('../images/tech/ml.jpg');
+}
+
+.neural{
+    background-image: url('../images/tech/neural.jpg');
+}
+
+.unity{
+    background-image: url('../images/tech/unity.jpg');
+}
+
+.vr{
+    background-image: url('../images/tech/ve.jpg');
+}
+
+.publishing {
+    top: 10rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 41px;
+    width: 35px;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    background-image: none;
+}
+
+.carousel-control-next {
+    width: 5%;
+    right: -50px;
+}
+
+.carousel-control-prev {
+    width: 5%;
+    left: -50px;
+}
+
+.carousel-control-next-icon:after {
+    content: '>';
+    font-size: 35px;
+    color: black;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 35px;
+    color: black;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.header-block{
+    position: relative;
+}
+
+.header-text{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-tech{
+    padding-left: 100px;
+}
+
+.right-tech{
+    padding-right: 100px;
+}
+
+.blockchain-dude, .ml-dude, .unity-dude{
+    bottom: -75px;
+    right: -75px;
+    z-index: 1;
+    height: 250px;
+}
+
+.vr-dude{
+    bottom: -75px;
+    left: -75px;
+    z-index: 1;
+    height: 250px;
+}
+
+.nerd-dude{
+    bottom: -75px;
+    left: -40px;
+    z-index: 1;
+    height: 325px;
+}
+
+.gray-dude{
+    bottom: -100px;
+    left: -50px;
+    z-index: 1;
+    height: 200px;
+}
+
+.publishing-card{
+    top: unset;
+    background-color: rgba(0,0,0,0.55);
+}
+
+.game-logo{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.store{
+    height:50px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+}
+
+.app-store{
+    background-image: url('../../images/game/apple_link.svg');
+}
+
+.play-store{
+    background-image: url('../../images/game/google_link.svg');
+}
+
+.game-screens{
+    height: 300px;
+    max-height: 300px;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+.header-simple-text{
+    margin-top: 6rem;
+}

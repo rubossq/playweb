@@ -1,0 +1,63 @@
+<!-- Header start -->
+<header>
+    {{> nav}}
+    <div class="container-fluid no-gutters p-0">
+        <div class="header-block position-relative justify-content-center align-items-center">
+            <img class="d-none d-lg-block w-100 " src="{{game.header.desktop}}" alt="Bowmaster">
+            <img class="block d-lg-none w-100" src="{{game.header.mobile}}" alt="Bowmaster">
+            <img class="game-logo m-auto position-absolute" src="{{game.logo}}">
+        </div>
+    </div>
+</header>
+<!-- Header end -->
+<!-- Main start -->
+<main class="container container-md mb-5 pb-5 animated zoomIn">
+    <div class="row d-flex justify-content-between mt-5 px-2 no-gutters">
+        <div class="col-12 col-md-3">
+            <div class="row no-gutters">
+                <div class="col-4 col-md-12 pl-2">
+                    <img src="{{game.icon}}" class="w-100 rounded">
+                </div>
+                <div class="col-8 d-md-none pl-2">
+                    <h1 class="text-primary text-uppercase" style="font-size: 1.75rem;">{{game.name}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8">
+            <h1 class="d-none d-md-block text-primary text-uppercase display-4">{{game.name}}</h1>
+            <p class="text-muted mt-3">{{game.short_desc}}</p>
+            <div class="row no-gutters mt-3 ">
+                <a href="{{game.app_store}}" class="mr-2 store app-store">
+
+                </a>
+                <a href="{{game.google_play}}" class="store play-store">
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-12 col-md-9 mx-auto my-5 px-2">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{game.youtube}}" frameborder="0"
+                        allow="encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters bg-light">
+        <div class="col-12 col-md-9 mx-auto my-5 px-2">
+            <p class="text-muted">{{{game.desc}}}</p>
+        </div>
+    </div>
+    <div class="bg-light row no-gutters">
+        <div class="col-12">
+            <div class="game-screens">
+                {{#game.screenshots}}
+                    <img class="h-100" src="{{.}}">
+                {{/game.screenshots}}
+            </div>
+        </div>
+    </div>
+</main>
+<!-- Main end -->
+{{> footer}}

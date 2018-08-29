@@ -1,0 +1,104 @@
+
+@media screen and (max-width: 1199px) {
+    .carousel-caption {
+        top: 5rem;
+    }
+
+    .container-md {
+        padding: 0;
+        margin: 0;
+        max-width: none;
+    }
+
+    .blockchain-dude, .ml-dude, .unity-dude{
+        bottom: -30px;
+        right: -30px;
+        height: 180px;
+    }
+
+    .vr-dude{
+        bottom: -30px;
+        left: -30px;
+        height: 180px;
+    }
+
+    .nerd-dude{
+        bottom: 10px;
+        left: 20px;
+        height: 200px;
+    }
+
+    .container-md-px {
+        padding: 0 15px;
+    }
+
+    .carousel-control-next {
+        right: 0;
+    }
+
+    .carousel-control-prev {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .carousel-caption {
+        top: 13rem;
+    }
+
+    .publishing {
+        top: 12rem;
+    }
+
+    .left-tech{
+        padding: 20px 15px;
+    }
+
+    .right-tech{
+        padding: 20px 15px;
+    }
+
+    .pad-spec{
+        margin-top: 5px!important;
+        margin-bottom: 5px!important;
+        padding-top: 5px!important;
+        padding-bottom: 5px!important;
+    }
+
+    .card-img-overlay{
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .carousel-caption {
+        top: 5rem;
+    }
+
+    .publishing {
+        top: 5rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carousel-caption {
+        top: 3rem;
+    }
+
+    .publishing {
+        top: 3rem;
+    }
+}

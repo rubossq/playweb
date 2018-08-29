@@ -1,0 +1,73 @@
+<!-- Header start -->
+<header>
+    {{> nav}}
+    <div class="container-fluid no-gutters p-0">
+        <div class="header-block">
+            <img class="d-none d-lg-block w-100 " src="images/publishing/header-publishing-desktop.jpg"
+                 alt="Technologies">
+            <img class="block d-lg-none w-100" src="images/publishing/header-publishing-mobile.jpg" alt="Technologies">
+            <h1 class="header-text position-absolute text-white display-4">Publishing</h1>
+        </div>
+    </div>
+</header>
+<!-- Header end -->
+<!-- Main start -->
+<main class="container container-md container-md-px mb-5 pb-5 animated zoomIn">
+    <div class="row text-center my-5">
+        <div class="col-12 col-md-8 px-5 mx-auto">
+            <h2>Want your success story here?</h2>
+            <p class="text-muted">Send us a video with the gameplay to <a href="publishing@playgendary.com">publishing@playgendary.com</a>!
+            </p>
+            <button class="btn btn-primary btn-lg py-2 px-5">Start here</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row my-5 d-flex justify-content-between align-items-center">
+        <div class="col-12 col-md-3 text-center">
+            <img src="images/publishing/nerd1.png" class="w-50">
+            <h3>User Acquisition</h3>
+            <p class="text-muted">Our own user base is over 60 million players, acquired in less than 12 months. We
+                exploit user traffic with maximum effectiveness.</p>
+        </div>
+        <div class="col-12 col-md-3 text-center">
+            <img src="images/publishing/rapper.png" class="w-50">
+            <h3>Smart Monetization</h3>
+            <p class="text-muted">We stand for good user experience; thus, we hate spamming our players with ads. Our
+                monetization is smartly built and efficient.</p>
+        </div>
+        <div class="col-12 col-md-3 text-center">
+            <img src="images/publishing/suitcase.png" class="w-50">
+            <h3>Clear Terms</h3>
+            <p class="text-muted">We want our partnerships to be simple and beneficial for every side. Transparency is
+                rooted in our corporate culture; our terms are clear and explicit.</p>
+        </div>
+    </div>
+    <div class="row">
+        {{#games}}
+            <div class="col-12 col-md-6 col-lg-4 px-1 border-0 my-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{preview}}" alt="Card image cap">
+                    <div class="card-img-overlay publishing-card text-center">
+                        <h4 class="card-title text-white">{{name}}</h4>
+                        <div style="display:none;">
+                            <p class="text-light my-5 pad-spec">{{publisher_desc}}</p>
+                            <a href="/games/{{alias}}" class="btn btn-primary btn-block py-2 my-3 pad-spec" href="#">View more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/games}}
+    </div>
+    <hr>
+    <div class="row text-center my-5">
+        <div class="col-12 col-md-8 px-5 mx-auto position-relative">
+            <h2>Want your success story here?</h2>
+            <p class="text-muted">You think you’ve created a great game, but don’t know how to make money from it? Send
+                us a video with the gameplay to <a href="publishing@playgendary.com">publishing@playgendary.com</a>!</p>
+            <button class="btn btn-primary btn-lg py-2 px-5">Contact us</button>
+            <img src="images/publishing/gray.png" class="d-none d-md-block position-absolute gray-dude">
+        </div>
+    </div>
+</main>
+<!-- Main end -->
+{{> footer}}
