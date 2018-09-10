@@ -8,6 +8,8 @@ let Path = require('path');
 let fs = require('fs');
 let Constant = require('./Constant');
 
+let rimraf = require('rimraf');
+
 class GameManager {
 
     static init() {
@@ -50,7 +52,9 @@ class GameManager {
             if (err) {
                 cb(err);
             } else {
-                cb(null, res.deletedCount);
+                GameManager.removeImages(game, function(err){
+                    cb(err, res.deletedCount);
+                });
             }
         });
     }
@@ -91,6 +95,14 @@ class GameManager {
                 let game = new Game(res);
                 GameManager.loadImages(game, cb);
             }
+        });
+    }
+
+    static removeImages(game, cb){
+        let path = Constant.GAMES_DIR + '/' + game.id;
+        let realPath = Path.join(rootPath.toString(), path);
+        rimraf(realPath, function (err) {
+            cb(err);
         });
     }
 
